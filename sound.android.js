@@ -5,7 +5,7 @@ var Sound = (function (_super) {
     function Sound() {
         _super.apply(this, arguments);
 
-        this._player = new android.media.SoundPool(1, android.media.AudioManager.STREAM_MUSIC, 0);
+        this._player = new android.media.SoundPool(1, android.media.AudioManager.STREAM_NOTIFICATION, 0);
         this._soundId = this._player.load(this._path, 1);
     }
     Sound.prototype.play = function () {
